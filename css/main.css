@@ -1,0 +1,103 @@
+:root{
+    --primarycolor:rgb(219, 30, 30);
+    --black:black;
+}
+::selection{
+    color: white;
+    background-color: var(--primarycolor);
+}
+html{scroll-behavior: smooth;}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+/* Nav bar styles */
+header{
+
+    height: 80vh;
+    background: url("/img/pic2.jpeg") no-repeat center center/cover;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color:white;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+.nav-item {
+ display: inline;
+ padding: 20px;
+}
+.logo{
+    color: var(--primarycolor);
+}
+
+.nav-bar{
+    padding-top: 20px;
+}
+.nav-item a{
+    text-transform: uppercase;
+    color: var(--primarycolor);
+    padding: 20px;
+    font-weight: bolder;
+    outline: none;
+}
+
+.nav-item a:hover{
+    color:var(--black);
+
+}
+
+/* Home div styles */
+
+#home{
+ padding:10% 20% 15% 15%;
+ color: white;
+ line-height: 2;
+ margin-top: 50px;
+ background-color: rgba(0, 0, 0, 0.651);
+
+ position: relative;
+ 
+
+}
+
+.about-btn{
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: white;
+    padding: 10px;
+    text-transform: capitalize;
+    background:var(--primarycolor);
+    font-weight: bolder;
+    border: 2px solid white;
+    text-transform: capitalize;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.about-btn:hover{
+   color: white;
+   background-color: var(--primarycolor);
+}
+.text-center{
+    text-align: center;
+}
+#about{
+    height: 80vh;
+    padding: 2% 0% 0% 0%;
+    color: var(--primarycolor);
+}
+
