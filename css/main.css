@@ -1,7 +1,8 @@
 :root{
     --primarycolor:rgb(219, 30, 30);
     --black:black;
-}
+    --blackish:rgba(0, 0, 0, 0.651);}
+
 ::selection{
     color: white;
     background-color: var(--primarycolor);
@@ -22,7 +23,7 @@ ul{
 /* Nav bar styles */
 header{
 
-    height: 80vh;
+    height: 90vh;
     background: url("/img/pic2.jpeg") no-repeat center center/cover;
 }
 nav{
@@ -63,15 +64,17 @@ nav{
 /* Home div styles */
 
 #home{
- padding:10% 20% 15% 15%;
+ padding:20% 20% 15% 15%;
  color: white;
+ width: 80%;
+ margin:auto;
  line-height: 2;
  margin-top: 50px;
- background-color: rgba(0, 0, 0, 0.651);
-
+ background-color:var(--blackish) ;
  position: relative;
- 
-
+}
+.welcome{
+    font-size: 2.5rem;
 }
 
 .about-btn{
@@ -80,9 +83,9 @@ nav{
     color: white;
     padding: 10px;
     text-transform: capitalize;
-    background:var(--primarycolor);
+    background:none;
     font-weight: bolder;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     text-transform: capitalize;
     border-radius: 7px;
     cursor: pointer;
