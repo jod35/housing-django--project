@@ -23,7 +23,20 @@ function shrinkOnscroll(){
         nav.style.padding="20px";
         for(let i=0; i<navbar_items.length; i++){
             navbar_items[i].style.color="rgb(219, 30, 30)";
+
+            navbar_items[i].addEventListener('mouseover',()=>{
+                navbar_items[i].style.color="black";
+
+                navbar_items[i].addEventListener('mouseleave',changeToBlack);
+            });
         }
+    }
+}
+
+
+function changeToBlack(){
+    for(let i=0; i<navbar_items.length;i++){
+        navbar_items[i].style.color="rgb(219, 30, 30)";
     }
 }
 

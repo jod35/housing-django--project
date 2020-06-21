@@ -1,7 +1,7 @@
 :root{
     --primarycolor:rgb(219, 30, 30);
     --black:black;
-    --blackish:rgba(0, 0, 0, 0.651);}
+    --blackish:rgba(0, 0, 0, 0.822);}
 
 ::selection{
     color: white;
@@ -48,7 +48,7 @@ nav{
 .nav-bar{
     padding-top: 20px;
 }
-.nav-item a{
+.nav-link{
     text-transform: uppercase;
     color: var(--primarycolor);
     padding: 20px;
@@ -56,7 +56,7 @@ nav{
     outline: none;
 }
 
-.nav-item a:hover{
+.nav-link:hover{
     color:var(--black);
 
 }
@@ -65,8 +65,9 @@ nav{
 
 #home{
  padding:20% 20% 15% 15%;
- color: white;
+ color: var(--primarycolor);
  width: 80%;
+ height: auto;
  margin:auto;
  line-height: 2;
  margin-top: 50px;
@@ -101,6 +102,36 @@ nav{
 #about{
     height: 80vh;
     padding: 2% 0% 0% 0%;
+    /* color: var(--primarycolor); */
+    display: flex;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5%;
+}
+
+.about{
+    display: flex;
+}
+
+.about-img{
+    padding: 20px;
+}  
+
+.description{
+    padding: 20px;
+    text-align: justify;
+}
+
+.head{
+    font-size: 2rem;
     color: var(--primarycolor);
 }
 
+.mybtn{
+    background-color: var(--primarycolor);
+    color: white;
+    padding: 20px;
+    text-transform: uppercase;
+}
