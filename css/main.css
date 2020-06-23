@@ -105,7 +105,7 @@ nav {
   text-transform: capitalize;
   background: none;
   font-weight: bolder;
-  /* border: 2px solid var(--white); */
+  border-radius: 5px;
   text-transform: capitalize;
   border-radius: 7px;
   cursor: pointer;
@@ -159,14 +159,16 @@ nav {
   color: var(--white);
   padding: 20px;
   text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .mybtn:hover {
   background: none;
   border: 2px var(--primarycolor) solid;
   color: var(--primarycolor);
 }
-#Properties h1 {
-  padding-top: 20px;
+#Properties {
+  padding: 10% 0% 0% 0%;
 }
 .rent {
   height: 120vh;
@@ -191,12 +193,13 @@ nav {
   padding: 10px;
 }
 .card-img {
-  transform: rotate(-5deg);
+  transform: rotate(5deg);
 }
+
 .card-img img {
   width: 100%;
   height: auto;
-  transform: rotate(5deg);
+  transform: rotate(-5deg);
 }
 .card-btn {
   color: white;
@@ -269,6 +272,7 @@ footer {
 .email-btn:hover {
   background-color: var(--white);
   color: var(--primarycolor);
+  border: 2px solid var(--white);
 }
 .email-input {
   border: none;
@@ -286,4 +290,71 @@ footer {
   display: flex;
   justify-content: space-between;
   color: var(--white);
+}
+.contacts {
+  min-height: 100vh;
+  padding: 100px 0px 0px 0px;
+  display: flex;
+}
+.form {
+  color: var(--primarycolor);
+  width: 50%;
+  padding: 20px;
+}
+input[type="submit"] {
+  border: none;
+}
+.form-input {
+  width: 100%;
+  background: none;
+  padding: 20px;
+  border: none;
+  border-bottom: 2px solid var(--primarycolor);
+}
+
+.social-icons {
+  /* background-color: var(--primarycolor); */
+  background: url("../img/pic1.webp") center no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: var(--whitish);
+}
+.social-contacts {
+  background-color: var(--primarycolor);
+  height: 50%;
+  padding: 20px;
+}
+.agents {
+  min-height: 100vh;
+  padding: 10% 0% 0% 0%;
+  color: var(--primarycolor);
+}
+.agent-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+.agent-card {
+  background-color: white;
+  width: 320px;
+  margin: 20px;
+  height: 450px;
+  padding: 20px;
+  text-align: justify;
+  box-shadow: 5px 2px 5px 5px var(--blackish);
+  border-radius: 7px;
+}
+
+.agent {
+  background-color: var(--primarycolor);
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.agent-img {
+  width: 100%;
+  height: auto;
 }
