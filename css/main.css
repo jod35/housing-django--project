@@ -38,6 +38,24 @@ header {
   height: 90vh;
   background: url("/img/pic2.jpeg") no-repeat center center/cover;
 }
+.open-btn {
+  display: none;
+}
+@media (max-width: 600px) {
+  nav {
+    padding: 20px;
+  }
+  .open-btn {
+    display: block;
+  }
+  .nav-bar {
+    display: none;
+  }
+  header{
+    padding: 0;
+    width: 100%;
+  }
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -61,6 +79,7 @@ nav {
 .nav-bar {
   padding-top: 20px;
 }
+}
 .nav-link {
   text-transform: uppercase;
   color: var(--primarycolor);
@@ -68,13 +87,7 @@ nav {
   font-weight: bolder;
   outline: none;
 }
-.drop-down {
-  display: none;
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  display: block;
-}
+
 
 .nav-link:hover {
   color: var(--black);
