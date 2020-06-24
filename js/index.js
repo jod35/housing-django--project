@@ -3,7 +3,11 @@ const navbar_items = document.querySelectorAll(".nav-link");
 const logo_area = document.querySelector(".logo");
 const dropdown_menu = document.querySelector(".drop-down");
 const dropdown_link = document.getElementById("buy-btn");
-const mobile_menu_button=document.querySelector('.open-btn');
+const mobile_menu_icon=document.querySelector('#mobile-menu');
+const overlay=document.querySelector('#overlay');
+
+
+
 window.onscroll = function () {
   shrinkOnscroll();
 };
@@ -35,8 +39,19 @@ function shrinkOnscroll() {
   }
 }
 
-dropdown_link.addEventListener("click", showDropDownMenu);
 
-function showDropDownMenu() {
-  dropdown_menu.style.display = "";
+
+
+
+
+mobile_menu_icon.addEventListener('click',displayNav);
+
+function displayNav(){
+  if(overlay.style.display=="none"){
+    overlay.style.display="block";
+  }
+  else{
+    overlay.style.display="none";
+   
+  }
 }

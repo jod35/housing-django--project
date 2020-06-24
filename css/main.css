@@ -41,8 +41,14 @@ header {
 .open-btn {
   display: none;
 }
+
+.overlay{
+  display: none;
+}
+
+
 /* Media queries for the first divs */
-@media (max-width: 600px){
+@media screen and (max-width: 600px){
   html{
     overflow-x: hidden;
   }
@@ -87,6 +93,36 @@ header {
   
   .mobile-menu{
     display: block;
+  }
+  .overlay-mobile{
+    height: 100vh;
+    /* position: relative; */
+    background-color: var(--primarycolor);
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .overlay-items{
+    display: flex;
+    padding: 20% 0% 0% 0%;
+    flex-direction: column;
+    /* background-color: var(--primarycolor); */
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  .overlay-items a{
+    padding: 20px;
+    text-transform: uppercase;
+    color: var(--white);
+        background-color: var(--primarycolor);
+
+  }
+  .overlay-items a:hover{
+    color: var(--primarycolor);
+    background-color: var(--white);
   }
 }
 .mobile-menu{
@@ -227,7 +263,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
 }
-@media(max-width:600px){
+@media screen and (max-width:600px){
   #Properties{
     margin-top: 50px;
     padding: 20% 0% 0% 0%;
@@ -310,7 +346,7 @@ nav {
   line-height: 1.5;
 }
 /* media queries for service div */
-@media(max-width:600px){
+@media screen and (max-width:600px){
   .services{
     margin: 10% 0% 0% 0%;
     padding: 2px;
@@ -413,7 +449,7 @@ input[type="submit"] {
   height: 50%;
   padding: 20px;
 }
-@media(max-width:600px){
+@media screen and (max-width:600px){
   .footer-list-display{
     display: flex;
     flex-direction: column;
@@ -454,7 +490,7 @@ input[type="submit"] {
   background-color: white;
   border: 2px solid var(--primarycolor);
 }
-@media(max-width:600px){
+@media screen and (max-width:600px){
   .agents{
     padding: 20% 0% 0% 0%;
   }
@@ -511,7 +547,7 @@ input[type="submit"] {
   padding: 10% 0% 0% 0%;
 }
 
-@media(max-width:600px){
+@media screen and (max-width:600px){
   #agent-details{
   display: flex;
   padding: 5%;
@@ -523,6 +559,12 @@ input[type="submit"] {
   }
   .form{
     width: 100%;
+    padding: 20px;
     
   }
+  .contacts{
+    display: flex;
+    flex-direction: column;
+  }
 }
+
