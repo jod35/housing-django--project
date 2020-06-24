@@ -12,37 +12,40 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- <link rel="stylesheet" href="css/all.min.css" /> -->
 
     <title>Real Estate Project Home</title>
   </head>
   <body>
     <nav>
-      <div class="logo"><h1>RN Properties</h1></div>
+      <div class="logo"><a href="index.html" class="nav-link"><h1>RN Properties</h1></a></div>
+      <span class="nav-link mobile-menu" onclick="openNav()" style="font-size: large;">
+        &#9776;
+      </span>
       <ul class="nav-bar">
         <li class="nav-item"><a class="nav-link" href="index.html">home</a></li>
+     
+
+        <li class="nav-item">
+          <a class="nav-link" href="agents.html">Agents</a>
+        </li>
 
         <li class="nav-item">
           <a href="contacts.html" class="nav-link">contacts</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="agents.html">Agents</a>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="#">Others</a></li>
       </ul>
     </nav>
-
     <!-- =============================This is the div for our agents. -->
     <div id="agents" class="agents">
-      <h1 class="text-center">
+      <h1 class="text-center red-text">
         Meet Our Agents
       </h1>
       <div class="agent-list">
-        <div class="agent-card">
+        <div class="agent-card text-center">
           <div class="agent">
             <img src="img/pic3.png" alt="" srcset="" class="agent-img" />
           </div>
-          <h2 class="agent-name">
+          <h2 class="agent-name text-center red-text">
             John Doe
           </h2>
           <p class="agent-desc">
@@ -50,14 +53,44 @@
             architecto similique quasi facilis eaque aliquam eum nam nostrum,
             quam ut.
           </p>
-          <br /><br />
-          <a href="#" class="mybtn">Contact Agent</a>
+          <br />
+          <a href="agent.html" class="agent-btn">Contact Agent</a>
+        </div>
+        <div class="agent-card text-center">
+          <div class="agent">
+            <img src="img/pic3.png" alt="" srcset="" class="agent-img" />
+          </div>
+          <h2 class="agent-name text-center red-text">
+            John Doe
+          </h2>
+          <p class="agent-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+            architecto similique quasi facilis eaque aliquam eum nam nostrum,
+            quam ut.
+          </p>
+          <br />
+          <a href="agent.html" class="agent-btn">Contact Agent</a>
+        </div>
+        <div class="agent-card text-center">
+          <div class="agent">
+            <img src="img/pic3.png" alt="" srcset="" class="agent-img" />
+          </div>
+          <h2 class="agent-name text-center red-text">
+            John Doe
+          </h2>
+          <p class="agent-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+            architecto similique quasi facilis eaque aliquam eum nam nostrum,
+            quam ut.
+          </p>
+          <br />
+          <a href="agent.html" class="agent-btn">Contact Agent</a>
         </div>
         <div class="agent-card">
           <div class="agent">
             <img src="img/pic3.png" alt="" srcset="" class="agent-img" />
           </div>
-          <h2 class="agent-name">
+          <h2 class="agent-name text-center red-text">
             John Doe
           </h2>
           <p class="agent-desc">
@@ -65,14 +98,14 @@
             architecto similique quasi facilis eaque aliquam eum nam nostrum,
             quam ut.
           </p>
-          <br /><br />
-          <a href="#" class="mybtn">Contact Agent</a>
+         <br>
+          <a href="agent.html" class="agent-btn">Contact Agent</a>
         </div>
         <div class="agent-card">
           <div class="agent">
             <img src="img/pic3.png" alt="" srcset="" class="agent-img" />
           </div>
-          <h2 class="agent-name">
+          <h2 class="agent-name text-center red-text">
             John Doe
           </h2>
           <p class="agent-desc">
@@ -80,14 +113,14 @@
             architecto similique quasi facilis eaque aliquam eum nam nostrum,
             quam ut.
           </p>
-          <br /><br />
-          <a href="#" class="mybtn">Contact Agent</a>
+         <br>
+          <a href="agent.html" class="agent-btn">Contact Agent</a>
         </div>
         <div class="agent-card">
           <div class="agent">
             <img src="img/pic3.png" alt="" srcset="" class="agent-img" />
           </div>
-          <h2 class="agent-name">
+          <h2 class="agent-name text-center red-text">
             John Doe
           </h2>
           <p class="agent-desc">
@@ -95,38 +128,8 @@
             architecto similique quasi facilis eaque aliquam eum nam nostrum,
             quam ut.
           </p>
-          <br /><br />
-          <a href="#" class="mybtn">Contact Agent</a>
-        </div>
-        <div class="agent-card">
-          <div class="agent">
-            <img src="img/pic3.png" alt="" srcset="" class="agent-img" />
-          </div>
-          <h2 class="agent-name">
-            John Doe
-          </h2>
-          <p class="agent-desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-            architecto similique quasi facilis eaque aliquam eum nam nostrum,
-            quam ut.
-          </p>
-          <br /><br />
-          <a href="#" class="mybtn">Contact Agent</a>
-        </div>
-        <div class="agent-card">
-          <div class="agent">
-            <img src="img/pic3.png" alt="" srcset="" class="agent-img" />
-          </div>
-          <h2 class="agent-name">
-            John Doe
-          </h2>
-          <p class="agent-desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-            architecto similique quasi facilis eaque aliquam eum nam nostrum,
-            quam ut.
-          </p>
-          <br /><br />
-          <a href="#" class="mybtn">Contact Agent</a>
+         <br>
+          <a href="agent.html" class="agent-btn">Contact Agent</a>
         </div>
       </div>
     </div>

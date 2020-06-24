@@ -12,47 +12,19 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- <link rel="stylesheet" href="css/all.min.css" /> -->
 
     <title>Real Estate Project Home</title>
   </head>
   <body>
     <nav>
       <div class="logo"><a href="index.html" class="nav-link"><h1>RN Properties</h1></a></div>
-      <span class="nav-link" onclick="openNav()" style="font-size: large;">
-        &#9776;
-      </span>
-      <ul class="nav-bar">
-        <li class="nav-item"><a class="nav-link" href="#home">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">about</a></li>
-        <li class="nav-item">
-          <a class="nav-link" href="#Properties">properties</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="buy-btn" href="#services">
-            Services
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#testimonials">testimonials</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="agents.html">Agents</a>
-        </li>
-
-        <li class="nav-item">
-          <a href="contacts.html" class="nav-link">contacts</a>
-        </li>
-      </ul>
-    </nav>    <nav>
-      <div class="logo"><a href="index.html" class="nav-link"><h1>RN Properties</h1></a></div>
       <span class="nav-link mobile-menu" onclick="openNav()" style="font-size: large;">
         &#9776;
       </span>
       <ul class="nav-bar">
         <li class="nav-item"><a class="nav-link" href="index.html">home</a></li>
-      
+ 
 
         <li class="nav-item">
           <a class="nav-link" href="agents.html">Agents</a>
@@ -63,33 +35,39 @@
         </li>
       </ul>
     </nav>
-    <main>
-      <div class="contacts">
+
+    <!-- =============================This is the div for an agent details. -->
+    <div id="agent-details">
+        <div class="details">
+            <div class="agent">
+                <img src="img/pic3.png" alt="" srcset="" class="agent-img" />
+              </div>
+            <h1 class="agent-name">John Doe</h1>
+            <p class="agent-details">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate optio praesentium aliquam at, consequatur fugit rem sunt ipsam magni doloribus sit reiciendis fuga, pariatur eos animi maiores, sequi ipsa. Molestiae ullam adipisci eum laboriosam maxime. Corrupti iste repudiandae minus labore sed quod praesentium corporis nam! Repudiandae molestias sint sit non.
+            </p>    
+        </div>
         <div class="form">
-          <h2>Give Us Your Feedback</h2>
-          <form action="" method="post">
-            <label for="email">Your Email</label>
-            <input type="text" name="email" id="" class="form-input" />
-            <label for="message">Your Message</label>
-            <textarea
-              name="message"
-              id=""
-              cols="30"
-              rows="10"
-              class="form-input"
-            ></textarea>
-            <br />
-            <br />
-            <input type="submit" value="Send Message" class="mybtn" />
-          </form>
-        </div>
-        <div class="social-icons">
-          <div class="social-contacts">
-            <h1>you can also contact us on social Media</h1>
+            <h3>Send John Doe A message</h3>
+            
+            <form action="" method="post">
+              <label for="email">Email</label>
+              <input type="text" name="email" id="" class="form-input" />
+              <label for="message">Message</label>
+              <textarea
+                name="message"
+                id=""
+                cols="30"
+                rows="10"
+                class="form-input"
+              ></textarea>
+              <br />
+              <br />
+              <input type="submit" value="Send Message" class="mybtn" />
+            </form>
           </div>
-        </div>
-      </div>
-    </main>
+    </div>
+    
     <footer>
       <div class="footer-logo">
         <h1>RN Properties</h1>
@@ -119,7 +97,19 @@
           <h3>Quick Links</h3>
           <ul>
             <li class="footer-item">
-              <a href="index.html" class="footer-link">Home</a>
+              <a href="#home" class="footer-link">Home</a>
+            </li>
+            <li class="footer-item">
+              <a href="#about" class="footer-link">About</a>
+            </li>
+            <li class="footer-item">
+              <a href="#services" class="footer-link">Service</a>
+            </li>
+            <li class="footer-item">
+              <a href="contacts.html" class="footer-link">Contacts</a>
+            </li>
+            <li class="footer-item">
+              <a href="agents.html" class="footer-link">Agents</a>
             </li>
           </ul>
         </div>

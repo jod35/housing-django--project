@@ -3,7 +3,7 @@ const navbar_items = document.querySelectorAll(".nav-link");
 const logo_area = document.querySelector(".logo");
 const dropdown_menu = document.querySelector(".drop-down");
 const dropdown_link = document.getElementById("buy-btn");
-
+const mobile_menu_button=document.querySelector('.open-btn');
 window.onscroll = function () {
   shrinkOnscroll();
 };
@@ -15,7 +15,8 @@ function shrinkOnscroll() {
   ) {
     nav.style.backgroundColor = "rgb(219, 30, 30)";
     nav.style.color = "white";
-    nav.style.padding = "10px";
+    nav.style.padding = "15px";
+    // mobile_menu_button.style.color="white";
 
     logo_area.style.color = "white";
 
@@ -25,10 +26,12 @@ function shrinkOnscroll() {
   } else {
     nav.style.backgroundColor = "white";
     logo_area.style.color = "rgb(219, 30, 30)";
-    nav.style.padding = "20px";
+    nav.style.padding = "30px";
     for (let i = 0; i < navbar_items.length; i++) {
       navbar_items[i].style.color = "rgb(219, 30, 30)";
     }
+    // mobile_menu_button.style.color="rgb(219, 30, 30)";
+   
   }
 }
 
