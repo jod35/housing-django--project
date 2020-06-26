@@ -37,7 +37,7 @@ ul {
 /* Nav bar styles */
 header {
   height: 90vh;
-  background: url("/img/pic2.jpeg") no-repeat center center/cover;
+  background: url("../img/pic2.jpeg") no-repeat center center/cover;
 }
 .open-btn {
   display: none;
@@ -449,7 +449,7 @@ input[type="submit"] {
 
 .social-icons {
   /* background-color: var(--primarycolor); */
-  background: url("../img/pic1.webp") center no-repeat;
+  background: url("../img/pic2.jpeg") center no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -488,10 +488,11 @@ input[type="submit"] {
   text-align: center;
   /* box-shadow: 5px 2px 5px 5px var(--blackish); */
   border-radius: 7px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.404);
 }
 .agent-card:hover{
   background-color: var(--whitish);
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.404);
+ 
 }
 .agent-btn{
   width: 80%;
