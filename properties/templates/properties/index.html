@@ -19,7 +19,7 @@
   </head>
   <body>
     <nav>
-      <div class="logo"><a href="index.html" class="nav-link"><h1>Anya Properties</h1></a></div>
+      <div class="logo"><a href="{% url 'properties:home' %}"class="nav-link"><h1>Anya Properties</h1></a></div>
       <span class="nav-link " id="mobile-menu" style="font-size: large;">
         &#9776;
       </span>
@@ -125,6 +125,7 @@
 
             <a href="#" class="card-btn">Details</a>
           </div>
+
           <div class="card">
             <div class="card-img">
               <img src="{% static 'properties/img/pic1.webp' %}" alt="" width="400" />
@@ -153,6 +154,22 @@
               exercitationem.
             </p>
             <br />js/index.js
+            <a href="#" class="card-btn">Details</a>
+          </div>
+          <div class="card">
+            <div class="card-img">
+              <img src="{% static 'properties/img/pic1.webp' %}" alt="" width="400" />
+            </div>
+            <h3 class="card-price">
+              UGX 650M
+            </h3>
+            <div class="card-desc">
+              Lorem idivsum dolor sit amet, consectetur adipisicing elit. Hic,
+              exercitationem.
+            </div>
+
+            <br />
+
             <a href="#" class="card-btn">Details</a>
           </div>
           <div class="card">
