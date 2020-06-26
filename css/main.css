@@ -4,6 +4,7 @@
   --blackish: rgba(0, 0, 0, 0.404);
   --white: white;
   --whitish: rgba(255, 255, 255, 0.671);
+  --dunno:rgb(250, 246, 240);
 }
 
 ::selection {
@@ -15,7 +16,7 @@ html {
   overflow-x: hidden;
 }
 body {
-  background-color: rgb(250, 246, 240);
+  background-color: ;
 }
 * {
   padding: 0;
@@ -43,6 +44,9 @@ header {
 }
 
 .overlay{
+  display: none;
+}
+#mobile-menu{
   display: none;
 }
 
@@ -88,21 +92,17 @@ header {
   }
   .about-btn{
     font-size: 1.2rem;
-    padding: 5px;
+    padding: 25px;
+    border: 5px solid white;
+
   }
   
-  .mobile-menu{
+  #mobile-menu{
     display: block;
+    font-size: 1.5rem;
   }
-  .overlay-mobile{
-    height: 100vh;
-    /* position: relative; */
+  .overlay{
     background-color: var(--primarycolor);
-    z-index: 2;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   .overlay-items{
     display: flex;
@@ -112,17 +112,18 @@ header {
     width: 100%;
     height: auto;
     text-align: center;
+    
   }
   .overlay-items a{
     padding: 20px;
     text-transform: uppercase;
     color: var(--white);
-        background-color: var(--primarycolor);
+        
 
   }
   .overlay-items a:hover{
     color: var(--primarycolor);
-    background-color: var(--white);
+    background-color: var(--whitish);
   }
 }
 .mobile-menu{
@@ -133,6 +134,7 @@ nav {
   justify-content: space-between;
   padding: 20px;
   background-color: var(--white);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.048);
   top: 0;
   left: 0;
   position: fixed;
@@ -194,6 +196,8 @@ nav {
   text-transform: capitalize;
   border-radius: 7px;
   cursor: pointer;
+  padding: 8px;
+  border: 2px solid white;
 }
 
 .about-btn:hover {
@@ -264,6 +268,9 @@ nav {
   flex-wrap: wrap;
 }
 @media screen and (max-width:600px){
+  .agents h1{
+    font-size: 1.2rem;
+  }
   #Properties{
     margin-top: 50px;
     padding: 20% 0% 0% 0%;
@@ -290,12 +297,16 @@ nav {
 .card {
   width: 320px;
   margin: 20px;
-  height: 420px;
-  /* background-color: var(--white); */
-  padding: ;
-  text-align: justify;
-  /* box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.123); */
-  border-radius: 7px;
+  height: 450px;
+ 
+  background-color: var(--dunno);
+  text-align:;
+  border-radius: 5px;
+}
+.card:hover{
+  box-shadow:2px 2px 2px 2px rgba(0, 0, 0, 0.123);
+  background-color: white;
+  transform: scale(1.0);
 }
 .card-price {
   padding: 10px;
@@ -315,6 +326,7 @@ nav {
   background-color: var(--primarycolor);
   padding: 10px;
   width: 80%;
+  margin: 20px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -325,7 +337,7 @@ nav {
 }
 .card-desc {
   padding: 10px;
-  line-height: 1.5;
+  line-height: 2;
 }
 .services {
   margin: 50px 0px 0px 0px;
@@ -473,8 +485,13 @@ input[type="submit"] {
   height: 500px;
   padding: 20px;
   text-align: justify;
+  text-align: center;
   /* box-shadow: 5px 2px 5px 5px var(--blackish); */
   border-radius: 7px;
+}
+.agent-card:hover{
+  background-color: var(--whitish);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.404);
 }
 .agent-btn{
   width: 80%;
@@ -544,7 +561,7 @@ input[type="submit"] {
   line-height: 1.5;
 }
 .form{
-  padding: 10% 0% 0% 0%;
+  padding: 10% 5% 5% 5%;
 }
 
 @media screen and (max-width:600px){
