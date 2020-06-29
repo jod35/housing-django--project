@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from .forms import HouseCreationForm
-from django.views.generic import ListView
+from django.views.generic import ListView,DetailView,UpdateView
 
 
 def index(request):
@@ -29,6 +29,19 @@ class HouseListView(ListView):
     context_object_name='houses'
     template_name='properties/houses.html'
     paginate_by=20
+
+
+
+class HouseUpdateView(UpdateView):
+    model = House
+    
+    template_name = "properties/house_update.html"
+    success_url='properties:houses'
+
+    def get_queryset(self,id):
+        queryset = House.objects.get(id=id) # TODO
+        return queryset
+    
 
 
 @login_required

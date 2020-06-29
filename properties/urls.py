@@ -29,4 +29,7 @@ urlpatterns = [
     path('register_agent', views.create_agent, name='create_agent'),
 
     path('houses/',views.HouseListView.as_view(),name='houses'),
+
+
+    path('update/<int:id>/',views.UpdateView.as_view(),name='house_update'),
 ]

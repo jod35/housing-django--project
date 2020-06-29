@@ -4,7 +4,7 @@
 {% if messages %}
     
     {% for message in messages %}
-        <li>{{message}}</li>
+        <li class="alert alert-{{message.tags}} message">{{message}}</li>
     {% endfor %}
         
 {% endif %}
@@ -28,7 +28,7 @@
             {% for house in houses %}
             <tr>
                 
-                <td>{{ house.name }}</td>
+                <td><a href="/update/{{house.id}}">{{ house.name }}</a></td>
                 <td>{{house.location}}</td>
                 <td>{{house.bedrooms}}</td>
                 <td>{{house.bathrooms}}</td>

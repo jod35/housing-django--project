@@ -699,3 +699,10 @@ input[type="submit"] {
 .table td{
   width: 150px;
 }
+li{
+  list-style-type:none ;
+}
+.message{
+  width: 50%;
+  list-style-type: none;
+}
