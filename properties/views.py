@@ -12,3 +12,7 @@ def contacts(request):
 
 def agents(request):
     return render(request, 'properties/agents.html')
+
+
+def admin_dashboard(request):
+    return render(request, 'properties/dashboard.html')

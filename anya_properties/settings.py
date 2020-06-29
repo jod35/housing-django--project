@@ -112,6 +112,6 @@ STATIC_URL = '/static/'
 STATICFILESDIRS = (os.path.join(BASE_DIR, 'static'))
 
 
-LOGIN_REDIRECT_URL = 'properties:home'
+LOGIN_REDIRECT_URL = 'properties:admin_dashboard'
 LOGIN_URL = 'properties:admin_login'
 LOGOUT_URL = 'properties:admin_logout'

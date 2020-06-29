@@ -5,7 +5,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'properties/css/main.css' %}" />
-    <title>Anya Properties | Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'properties/css/all.min.css' %}" />
+
+    <title>Real Estate Project Home</title>
   </head>
   <body>
     <nav>
@@ -19,16 +29,14 @@
       </span>
       <ul class="nav-bar">
         {% if user.is_authenticated %}
-        <li class="nav-item"><a class="nav-link" href="#home">houses</a></li>
+        <li class="nav-item"><a class="nav-link" href="#home">home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">about</a></li>
         <li class="nav-item">
-          <a class="nav-link" href="#about">warehouses</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#Properties">land</a>
+          <a class="nav-link" href="#Properties">properties</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" id="buy-btn" href="#services">
-            agents
+            Services
           </a>
         </li>
 
@@ -72,7 +80,14 @@
         <a href="{% url 'properties:contacts' %}">Contacts</a>
       </div>
     </div>
-    <div id="dashboard"></div>
+    <div class="logged-out">
+      <h1>You are Logged Out.</h1>
+      <p>Thank you for spending Some Quality Time With The Web Site</p>
+      <a href="{% url 'properties:admin_login' %}" class="red-text"
+        >Please login Again</a
+      >
+    </div>
+
     <script src="{% static 'properties/js/index.js' %}"></script>
   </body>
 </html>

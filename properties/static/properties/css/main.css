@@ -608,3 +608,8 @@ input[type="submit"] {
 .btn-long{
   width: 100%;
 }
+
+.logged-out{
+  padding: 20%;
+  line-height: 2;
+}

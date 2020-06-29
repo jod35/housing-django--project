@@ -19,11 +19,34 @@
   </head>
   <body>
     <nav>
-      <div class="logo"><a href="{% url 'properties:home' %}"class="nav-link"><h1>Anya Properties</h1></a></div>
-      <span class="nav-link " id="mobile-menu" style="font-size: large;">
+      <div class="logo">
+        <a href="{% url 'properties:home' %}" class="nav-link"
+          ><h1>Anya Properties</h1></a
+        >
+      </div>
+      <span class="nav-link" id="mobile-menu" style="font-size: large;">
         &#9776;
       </span>
       <ul class="nav-bar">
+        {% if user.is_authenticated %}
+        <li class="nav-item"><a class="nav-link" href="#home">home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">about</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Properties">properties</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="buy-btn" href="#services">
+            Services
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="{% url 'properties:admin_logout' %}" class="nav-link"
+            >Log Out</a
+          >
+        </li>
+
+        {% else %}
         <li class="nav-item"><a class="nav-link" href="#home">home</a></li>
         <li class="nav-item"><a class="nav-link" href="#about">about</a></li>
         <li class="nav-item">
@@ -43,8 +66,11 @@
         </li>
 
         <li class="nav-item">
-          <a href="{% url 'properties:contacts' %}" class="nav-link">contacts</a>
+          <a href="{% url 'properties:contacts' %}" class="nav-link"
+            >contacts</a
+          >
         </li>
+        {% endif %}
       </ul>
     </nav>
     <div id="overlay" class="overlay">
@@ -55,7 +81,6 @@
       </div>
     </div>
     <header>
-     
       <!--================================== Home Div ========================== -->
       <div id="home">
         <h1 class="lg-text welcome">
@@ -87,17 +112,22 @@
             properties in the Pearl of Uganda.
           </p>
           <br />
-        
+
           <a href="#Properties" class="mybtn">Check Out Properties</a>
         </div>
       </div>
       <!-- =============Properties div======================================== -->
       <div class="properties" id="Properties">
-        <h1 class="text-center red-text">Properties </h1>
+        <h1 class="text-center red-text">Properties</h1>
         <div class="rent">
           <div class="card">
             <div class="card-img">
-              <img src="{% static 'properties/img/pic1.webp' %}" alt="" width="100%" height="auto" />
+              <img
+                src="{% static 'properties/img/pic1.webp' %}"
+                alt=""
+                width="100%"
+                height="auto"
+              />
             </div>
             <h3 class="card-price">
               UGX 650M
@@ -112,23 +142,11 @@
           </div>
           <div class="card">
             <div class="card-img">
-              <img src="{% static 'properties/img/pic1.webp' %}" alt="" width="400" />
-            </div>
-            <h3 class="card-price">
-              UGX 650M
-            </h3>
-            <p class="card-desc">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic,
-              exercitationem.
-            </p>
-            <br />
-
-            <a href="#" class="card-btn">Details</a>
-          </div>
-
-          <div class="card">
-            <div class="card-img">
-              <img src="{% static 'properties/img/pic1.webp' %}" alt="" width="400" />
+              <img
+                src="{% static 'properties/img/pic1.webp' %}"
+                alt=""
+                width="400"
+              />
             </div>
             <h3 class="card-price">
               UGX 650M
@@ -144,7 +162,31 @@
 
           <div class="card">
             <div class="card-img">
-              <img src="{% static 'properties/img/pic1.webp' %}" alt="" width="400" />
+              <img
+                src="{% static 'properties/img/pic1.webp' %}"
+                alt=""
+                width="400"
+              />
+            </div>
+            <h3 class="card-price">
+              UGX 650M
+            </h3>
+            <p class="card-desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic,
+              exercitationem.
+            </p>
+            <br />
+
+            <a href="#" class="card-btn">Details</a>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="{% static 'properties/img/pic1.webp' %}"
+                alt=""
+                width="400"
+              />
             </div>
             <h3 class="card-price">
               UGX 650M
@@ -158,7 +200,11 @@
           </div>
           <div class="card">
             <div class="card-img">
-              <img src="{% static 'properties/img/pic1.webp' %}" alt="" width="400" />
+              <img
+                src="{% static 'properties/img/pic1.webp' %}"
+                alt=""
+                width="400"
+              />
             </div>
             <h3 class="card-price">
               UGX 650M
@@ -174,7 +220,11 @@
           </div>
           <div class="card">
             <div class="card-img">
-              <img src="{% static 'properties/img/pic1.webp' %}" alt="" width="400" />
+              <img
+                src="{% static 'properties/img/pic1.webp' %}"
+                alt=""
+                width="400"
+              />
             </div>
             <h3 class="card-price">
               UGX 650M
@@ -195,7 +245,12 @@
         <h1 class="text-center red-text">Services</h1>
         <div class="card-lg">
           <div class="card-img">
-            <img src="{% static 'properties/img/pic1.webp' %}" alt="" srcset="" class="desc-img" />
+            <img
+              src="{% static 'properties/img/pic1.webp' %}"
+              alt=""
+              srcset=""
+              class="desc-img"
+            />
           </div>
           <div class="desc-content">
             <h3 class="red-text">Houses</h3>
@@ -212,7 +267,12 @@
 
         <div class="card-lg">
           <div class="card-img">
-            <img src="{% static 'properties/img/pic1.webp' %}" alt="" srcset="" class="desc-img" />
+            <img
+              src="{% static 'properties/img/pic1.webp' %}"
+              alt=""
+              srcset=""
+              class="desc-img"
+            />
           </div>
           <div class="desc-content">
             <h3 class="red-text">Apartments</h3>
@@ -229,7 +289,12 @@
 
         <div class="card-lg">
           <div class="card-img">
-            <img src="{% static 'properties/img/pic1.webp' %}" alt="" srcset="" class="desc-img" />
+            <img
+              src="{% static 'properties/img/pic1.webp' %}"
+              alt=""
+              srcset=""
+              class="desc-img"
+            />
           </div>
           <div class="desc-content">
             <h3 class="red-text">Warehouses</h3>
@@ -251,50 +316,64 @@
         <div class="agent-list">
           <div class="agent-card">
             <div class="agent">
-              <img src="{% static 'properties/img/pic3.png' %}" alt="" srcset="" class="agent-img" />
+              <img
+                src="{% static 'properties/img/pic3.png' %}"
+                alt=""
+                srcset=""
+                class="agent-img"
+              />
             </div>
-            <br>
+            <br />
             <h2 class="agent-name text-center red-text">
               John Doe
             </h2>
             <blockquote class="agent-desc">
               <q>
-              Lorem iblockquotesum dolor sit amet consectetur adipisicing elit. Optio
-              architecto similique quasi facilis eaque aliquam eum nam nostrum,
-              quam ut.
+                Lorem iblockquotesum dolor sit amet consectetur adipisicing
+                elit. Optio architecto similique quasi facilis eaque aliquam eum
+                nam nostrum, quam ut.
               </q>
             </blockquote>
-            
           </div>
           <div class="agent-card text-center">
             <div class="agent">
-              <img src="{% static 'properties/img/pic3.png' %}" alt="" srcset="" class="agent-img" />
+              <img
+                src="{% static 'properties/img/pic3.png' %}"
+                alt=""
+                srcset=""
+                class="agent-img"
+              />
             </div>
-            <br>
+            <br />
             <h2 class="agent-name text-center red-text">
               John Doe
             </h2>
-            <blockquote class="agent-desc ">
+            <blockquote class="agent-desc">
               <q>
-              Lorem iblockquotesum dolor sit amet consectetur adipisicing elit. Optio
-              architecto similique quasi facilis eaque aliquam eum nam nostrum,
-              quam ut.
+                Lorem iblockquotesum dolor sit amet consectetur adipisicing
+                elit. Optio architecto similique quasi facilis eaque aliquam eum
+                nam nostrum, quam ut.
               </q>
             </blockquote>
           </div>
           <div class="agent-card">
             <div class="agent">
-              <img src="{% static 'properties/img/pic3.png' %}" alt="" srcset="" class="agent-img" />
+              <img
+                src="{% static 'properties/img/pic3.png' %}"
+                alt=""
+                srcset=""
+                class="agent-img"
+              />
             </div>
-            <br>
+            <br />
             <h2 class="agent-name text-center red-text">
               John Doe
             </h2>
             <blockquote class="agent-desc">
               <q>
-              Lorem iblockquotesum dolor sit amet consectetur adipisicing elit. Optio
-              architecto similique quasi facilis eaque aliquam eum nam nostrum,
-              quam ut.
+                Lorem iblockquotesum dolor sit amet consectetur adipisicing
+                elit. Optio architecto similique quasi facilis eaque aliquam eum
+                nam nostrum, quam ut.
               </q>
             </blockquote>
           </div>
@@ -324,13 +403,14 @@
             <li class="footer-item">
               <a href="" class="footer-link">Buy land</a>
             </li>
-            
+
             {% if user.is_authenticated %}
             <li class="footer-item">
-              <a href="{% url 'properties:admin_logout' %}" class="footer-link">Log Out</a>
+              <a href="{% url 'properties:admin_logout' %}" class="footer-link"
+                >Log Out</a
+              >
             </li>
             {% endif %}
-              
           </ul>
         </div>
         <div class="footer-properties">
