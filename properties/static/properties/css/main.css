@@ -620,9 +620,24 @@ input[type="submit"] {
 /* Dashboard styling */
 .dash-container{
   width: 50%;
-  height: 100px;
+  height: 150px;
   margin: 20px;
   background-color: var(--primarycolor);
+  padding: 25px;
+  color: var(--white);
+}
+.dash-container ul li {
+  padding: 5px;
+  list-style-type:square;
+  
+
+}
+.dash-option{
+  color: var(--whitish);
+  padding: 20px;
+}
+.dash-option:hover{
+  color: white;
 }
 .side-bar{
   position: fixed;
