@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import House, WareHouse, Land
 from django.contrib import messages
 from django.contrib.auth.models import User
@@ -49,6 +49,18 @@ def admin_dashboard(request):
 @login_required
 def create_house(request):
     form=HouseCreationForm()
+
+    if request.method =='POST':
+        form= HouseCreationForm(request.POST)
+
+        if form.is_valid():
+            obj=form.save(commit=False)
+            obj.agent=request.user
+
+            obj.save()
+            messages.success(request,'Item added successfully')
+
+            return redirect('properties:houses')
     context = {
         'form':form
     }

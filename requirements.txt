@@ -1,0 +1,5 @@
+django
+django-crispy-forms
+django-taggit
+psycopg2
+pillow
