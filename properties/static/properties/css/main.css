@@ -609,7 +609,39 @@ input[type="submit"] {
   width: 100%;
 }
 
+/* Styling for the logged out page */
 .logged-out{
   padding: 20%;
   line-height: 2;
+}
+#dashboard{
+  padding: 10% 0% 5% 5%;
+}
+/* Dashboard styling */
+.dash-container{
+  width: 50%;
+  height: 100px;
+  margin: 20px;
+  background-color: var(--primarycolor);
+}
+.side-bar{
+  position: fixed;
+  top :20%;
+  left: 75%;
+  width: 20%;
+  margin: 20px;
+}
+
+.options{
+  background-color: var(--primarycolor);
+  width: 100%;
+  padding: 20px;
+}
+.opt-item{
+  padding: 20px;
+}
+.opt-link{
+  padding: 20px;
+  color: white;
+  height: 20px;
 }

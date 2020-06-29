@@ -10,7 +10,7 @@
   <body>
     <nav>
       <div class="logo">
-        <a href="{% url 'properties:home' %}" class="nav-link"
+        <a href="{% url 'properties:admin_dashboard' %}" class="nav-link"
           ><h1>Anya Properties</h1></a
         >
       </div>
@@ -18,10 +18,20 @@
         &#9776;
       </span>
       <ul class="nav-bar">
-        {% if user.is_authenticated %}
-        <li class="nav-item"><a class="nav-link" href="#home">houses</a></li>
         <li class="nav-item">
-          <a class="nav-link" href="#about">warehouses</a>
+          <a class="nav-link" href="#home"
+            ><a href="" class="opt-link">houses</a></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about"
+            >houses<a href="" class="opt-link"></a
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about"
+            >ware houses<a href="" class="opt-link"></a
+          ></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#Properties">land</a>
@@ -37,32 +47,6 @@
             >Log Out</a
           >
         </li>
-
-        {% else %}
-        <li class="nav-item"><a class="nav-link" href="#home">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">about</a></li>
-        <li class="nav-item">
-          <a class="nav-link" href="#Properties">properties</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="buy-btn" href="#services">
-            Services
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#testimonials">testimonials</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'properties:agents' %}">Agents</a>
-        </li>
-
-        <li class="nav-item">
-          <a href="{% url 'properties:contacts' %}" class="nav-link"
-            >contacts</a
-          >
-        </li>
-        {% endif %}
       </ul>
     </nav>
     <div id="overlay" class="overlay">
@@ -72,7 +56,17 @@
         <a href="{% url 'properties:contacts' %}">Contacts</a>
       </div>
     </div>
-    <div id="dashboard"></div>
+    <div id="dashboard">
+      {% block content %} {% endblock content %}
+    </div>
+    <div class="side-bar">
+      <ul class="options">
+        <li class="opt-item"><a href="" class="opt-link">Houses</a></li>
+        <li class="opt-item"><a href="" class="opt-link">WareHouses</a></li>
+        <li class="opt-item"><a href="" class="opt-link">Land</a></li>
+        <li class="opt-item"><a href="" class="opt-link">Agents</a></li>
+      </ul>
+    </div>
     <script src="{% static 'properties/js/index.js' %}"></script>
   </body>
 </html>
