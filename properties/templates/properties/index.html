@@ -324,6 +324,13 @@
             <li class="footer-item">
               <a href="" class="footer-link">Buy land</a>
             </li>
+            
+            {% if user.is_authenticated %}
+            <li class="footer-item">
+              <a href="{% url 'properties:admin_logout' %}" class="footer-link">Log Out</a>
+            </li>
+            {% endif %}
+              
           </ul>
         </div>
         <div class="footer-properties">

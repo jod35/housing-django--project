@@ -442,6 +442,8 @@ input[type="submit"] {
 .form-input {
   width: 100%;
   background: none;
+  color: var(--primarycolor);
+  text-align: center;
   padding: 20px;
   border: none;
   border-bottom: 2px solid var(--primarycolor);
@@ -585,3 +587,20 @@ input[type="submit"] {
   }
 }
 
+.login-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  color:var(--primarycolor);
+}
+.form-group{
+  padding: 20px;
+}
+#myfield{
+  width: 100%;
+}
+.btn-long{
+  width: 100%;
+}

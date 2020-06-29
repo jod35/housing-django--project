@@ -1,0 +1,36 @@
+:root {
+  --primarycolor: rgb(219, 30, 30);
+  --black: black;
+  --blackish: rgba(0, 0, 0, 0.404);
+  --white: white;
+  --whitish: rgba(255, 255, 255, 0.671);
+  --dunno: rgb(250, 246, 240);
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.dash-board {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+ul {
+  list-style: none;
+}
+.left {
+  background-color: var(--primarycolor);
+  width: 20%;
+  height: 100%;
+  position: fixed;
+}
+.left-menu {
+  margin-top: 200px;
+  color: white;
+  text-align: center;
+}
+.right {
+  padding: 20px;
+  width: 60%;
+}

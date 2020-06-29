@@ -94,6 +94,7 @@ header {
     font-size: 1.2rem;
     padding: 25px;
     border: 5px solid white;
+    background-color: var(--primarycolor);
 
   }
   
@@ -188,9 +189,10 @@ nav {
   font-size: 1.5rem;
   margin-top: 20px;
   color: var(--white);
+  background-color: var(--primarycolor);
   padding: 10px;
   text-transform: capitalize;
-  background: none;
+  
   font-weight: bolder;
   border-radius: 5px;
   text-transform: capitalize;
@@ -441,12 +443,16 @@ input[type="submit"] {
 }
 .form-input {
   width: 100%;
-  background: none;
+  background:var(--white);
   padding: 20px;
   border: none;
   border-bottom: 2px solid var(--primarycolor);
 }
-
+.login-form{
+  min-height: 80vh;
+  padding: 15% 0% 0% 0%;
+  text-align: center;
+}
 .social-icons {
   /* background-color: var(--primarycolor); */
   background: url("../img/pic2.jpeg") center no-repeat;
@@ -586,3 +592,19 @@ input[type="submit"] {
   }
 }
 
+
+.login-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 80vh;
+  color:var(--primarycolor);
+}
+
+#myfield{
+  width: 100%;
+}
+.btn-long{
+  width: 100%;
+}
