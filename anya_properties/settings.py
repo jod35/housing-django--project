@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'properties.apps.PropertiesConfig',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -115,3 +116,8 @@ STATICFILESDIRS = (os.path.join(BASE_DIR, 'static'))
 LOGIN_REDIRECT_URL = 'properties:admin_dashboard'
 LOGIN_URL = 'properties:admin_login'
 LOGOUT_URL = 'properties:admin_logout'
+
+
+#crispy_forms setting
+
+CRISPY_TEMPLATE_PACK='bootstrap4'

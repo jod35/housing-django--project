@@ -1,0 +1,50 @@
+{% extends 'properties/dashboard.html' %}
+{% block content %}
+
+{% if messages %}
+    
+    {% for message in messages %}
+        <li>{{message}}</li>
+    {% endfor %}
+        
+{% endif %}
+    
+{% if houses %}
+<h3 class="red-text">{{ houses.count }} House{{houses.count|pluralize}} in database</h3>
+<span><a href="{% url 'properties:create_house' %}" class="red-text">Add A House</a></span>
+<table class="table table-striped table-inverse table-responsive">
+    <thead class="thead-inverse">
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Bedrooms</th>
+            <th>Bathrooms</th>
+            <th>Toilets</th>
+            <th>Agents</th>
+        </tr>
+        </thead>
+        <tbody>
+            
+            {% for house in houses %}
+            <tr>
+                
+                <td>{{ house.name }}</td>
+                <td>{{house.location}}</td>
+                <td>{{house.bedrooms}}</td>
+                <td>{{house.bathrooms}}</td>
+                <td>{{house.toilets}}</td>
+                <td>{{house.agent}}</td>
+
+            </tr>
+            {% endfor %}
+                
+        </tbody>
+</table>
+    {% include 'properties/pagination.html' %}
+    {% else %}
+    <h3>There are no houses yet.</h3>
+    <a href="{% url 'properties:create_house' %}">Add A House</a>
+{% endif %}
+    
+{% endblock content %}
+    

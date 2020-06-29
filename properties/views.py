@@ -3,6 +3,8 @@ from .models import House, WareHouse, Land
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from .forms import HouseCreationForm
+from django.views.generic import ListView
 
 
 def index(request):
@@ -15,6 +17,18 @@ def contacts(request):
 
 def agents(request):
     return render(request, 'properties/agents.html')
+
+# @login_required
+# def houses(request):
+#     houses=
+#     return render(request,'properties/houses.html')
+
+
+class HouseListView(ListView):
+    queryset=House.objects.order_by('-id').all()
+    context_object_name='houses'
+    template_name='properties/houses.html'
+    paginate_by=20
 
 
 @login_required
@@ -34,7 +48,10 @@ def admin_dashboard(request):
 
 @login_required
 def create_house(request):
-    context = {}
+    form=HouseCreationForm()
+    context = {
+        'form':form
+    }
     return render(request, 'properties/createhouse.html', context)
 
 

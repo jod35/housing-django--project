@@ -26,5 +26,7 @@ urlpatterns = [
 
     path('createplot', views.create_land_plot, name='create_land_plot'),
 
-    path('register_agent', views.)
+    path('register_agent', views.create_agent, name='create_agent'),
+
+    path('houses/',views.HouseListView.as_view(),name='houses'),
 ]

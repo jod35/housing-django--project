@@ -2,7 +2,11 @@
 <div class="dash-container">
   <h1>{{houses.count}} House{{houses.count|pluralize}}</h1>
   <ul>
-    <li><a class="dash-option" href="">Add A house</a></li>
+    <li>
+      <a class="dash-option" href="{% url 'properties:create_house' %}"
+        >Add A house</a
+      >
+    </li>
     <li><a class="dash-option" href="">Change A house</a></li>
   </ul>
 </div>
