@@ -35,5 +35,8 @@ urlpatterns = [
 
     path('delete_house/<int:id>', views.delete_house, name='house_delete'),
 
-    path('warehouses', views.WareHouseListView.as_view(), name='warehouses'),
+    path('warehouses/', views.WareHouseListView.as_view(), name='warehouses'),
+
+    path('update_warehouse/<pk>/',views.WareHouseUpdateView.as_view(),name='warehouse_update'),
+
 ]

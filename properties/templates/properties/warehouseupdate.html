@@ -1,0 +1,16 @@
+{% extends 'properties/dashboard.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="dash-form">
+    <h3>Update House Information</h3>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form |crispy}}
+        <input type="submit" value="Save" class="btn btn-success">
+        <a href="/delete_warehouse/{{house.id}}" class="btn btn-danger">Delete</a>
+        <a href="{% url 'properties:houses' %}" class="btn btn-info">Back</a>
+    </form>
+</div>
+{% endblock content %}
+    

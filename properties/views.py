@@ -96,6 +96,15 @@ class WareHouseListView(ListView):
     context_object_name='warehouses'
 
 
+class WareHouseUpdateView(UpdateView):
+    model=WareHouse
+    template_name='properties/warehouseupdate.html'
+    success_url='/warehouses/'
+    fields=['name','location','price','space']
+
+    
+
+
 @ login_required
 def create_warehouse(request):
     form = WareHouseCreateForm()
