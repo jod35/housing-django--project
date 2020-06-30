@@ -31,5 +31,7 @@ urlpatterns = [
     path('houses/',views.HouseListView.as_view(),name='houses'),
 
 
-    path('update/<pk>/',views.HouseUpdateView.as_view(),name='house_update'),
+    path('update_house/<pk>/',views.HouseUpdateView.as_view(),name='house_update'),
+
+    path('delete_house/<int:id>',views.delete_house,name='house_delete')
 ]

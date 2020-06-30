@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from .forms import HouseCreationForm
-from django.views.generic import ListView,DetailView,UpdateView
+from django.views.generic import ListView,DetailView,UpdateView,DeleteView
 
 
 def index(request):
@@ -38,6 +38,21 @@ class HouseUpdateView(UpdateView):
     
     template_name = "properties/houseupdate.html"
     success_url='/houses/'
+
+
+
+def delete_house(request,id):
+    house=House.objects.get(id=id)
+
+
+    if request.method == 'POST':
+        house.delete()
+        messages.success(request,'Record deleted successfully')
+        return redirect('properties:houses')
+    context={
+        'house':house
+    }
+    return render(request,'properties/housedelete.html',context)
 
  
     
