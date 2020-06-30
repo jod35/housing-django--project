@@ -102,7 +102,17 @@ class WareHouseUpdateView(UpdateView):
     success_url='/warehouses/'
     fields=['name','location','price','space']
 
-    
+def delete_warehouse(request, id):
+    warehouse = WareHouse.objects.get(id=id)
+
+    if request.method == 'POST':
+        warehouse.delete()
+        messages.success(request, 'Record deleted successfully')
+        return redirect('properties:houses')
+    context = {
+        'house': warehouse
+    }
+    return render(request, 'properties/warehousedelete.html', context)
 
 
 @ login_required

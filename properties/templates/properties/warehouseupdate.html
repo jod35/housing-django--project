@@ -8,8 +8,8 @@
         {% csrf_token %}
         {{ form |crispy}}
         <input type="submit" value="Save" class="btn btn-success">
-        <a href="/delete_warehouse/{{house.id}}" class="btn btn-danger">Delete</a>
-        <a href="{% url 'properties:houses' %}" class="btn btn-info">Back</a>
+        <a href="/delete_warehouse/{{warehouse.id}}" class="btn btn-danger">Delete</a>
+        <a href="{% url 'properties:warehouses' %}" class="btn btn-info">Back</a>
     </form>
 </div>
 {% endblock content %}
