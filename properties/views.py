@@ -34,13 +34,12 @@ class HouseListView(ListView):
 
 class HouseUpdateView(UpdateView):
     model = House
+    fields=['name','location','price','bedrooms','bathrooms']
     
-    template_name = "properties/house_update.html"
-    success_url='properties:houses'
+    template_name = "properties/houseupdate.html"
+    success_url='/houses/'
 
-    def get_queryset(self,id):
-        queryset = House.objects.get(id=id) # TODO
-        return queryset
+ 
     
 
 

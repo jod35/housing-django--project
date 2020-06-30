@@ -31,5 +31,5 @@ urlpatterns = [
     path('houses/',views.HouseListView.as_view(),name='houses'),
 
 
-    path('update/<int:id>/',views.UpdateView.as_view(),name='house_update'),
+    path('update/<pk>/',views.HouseUpdateView.as_view(),name='house_update'),
 ]
