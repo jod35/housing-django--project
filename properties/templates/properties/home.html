@@ -1,6 +1,8 @@
 {% extends 'properties/dashboard.html' %} {% block content %}
 <div class="dash-container">
-  <h1>{{houses.count}} House{{houses.count|pluralize}}</h1>
+  <h1>
+    <i class="fa fa-bed"></i> {{houses.count}} House{{houses.count|pluralize}}
+  </h1>
   <ul>
     <li>
       <a class="dash-option" href="{% url 'properties:create_house' %}"
@@ -11,21 +13,29 @@
   </ul>
 </div>
 <div class="dash-container">
-  <h1>{{warehouses.count}} Warehouse{{warehouses.count|pluralize}}</h1>
+  <h1>
+    <i class="fa fa-building"></i> {{warehouses.count}}
+    Warehouse{{warehouses.count|pluralize}}
+  </h1>
   <ul>
     <li><a class="dash-option" href="">Add A warehouse</a></li>
     <li><a class="dash-option" href="">Change A warehouse</a></li>
   </ul>
 </div>
 <div class="dash-container">
-  <h1>{{ land_plots.count }} Land Plot{{land_plots|pluralize}}</h1>
+  <h1>
+    <i class="fa fa-road"></i> {{ land_plots.count }} Land
+    Plot{{land_plots|pluralize}}
+  </h1>
   <ul>
     <li><a class="dash-option" href="">Add A land plot</a></li>
     <li><a class="dash-option" href="">Change A land plot</a></li>
   </ul>
 </div>
 <div class="dash-container">
-  <h1>{{ agents.count }} Agent{{agents|pluralize}}</h1>
+  <h1>
+    <i class="fa fa-users"></i> {{ agents.count }} Agent{{agents|pluralize}}
+  </h1>
   <ul>
     <li><a class="dash-option" href="">Add An agent</a></li>
     <li><a class="dash-option" href="">Change An agent</a></li>
