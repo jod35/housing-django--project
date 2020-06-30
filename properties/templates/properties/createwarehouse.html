@@ -1,0 +1,10 @@
+{% extends 'properties/dashboard.html' %} {% load crispy_forms_tags %} 
+{% block  content %}
+<div class="dash-form">
+  <h3>Add A WareHouse</h3>
+  <form action="" method="post">
+    {% csrf_token %} {{ form |crispy}}
+    <input type="submit" value="Save" class="mybtn" />
+  </form>
+</div>
+{% endblock content %}

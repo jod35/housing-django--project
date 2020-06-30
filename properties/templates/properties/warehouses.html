@@ -1,0 +1,37 @@
+{% extends 'properties/dashboard.html' %} {% block content %} {% if messages %}
+{% for message in messages %}
+<li class="alert alert-{{message.tags}} message">{{message}}</li>
+{% endfor %} {% endif %} {% if warehouses %}
+<h3 class="red-text">
+  {{ houses.count }} House{{houses.count|pluralize}} in database
+</h3>
+<span
+  ><a href="{% url 'properties:create_house' %}" class="red-text"
+    >Add A Ware House</a
+  ></span
+>
+<table class="table table-striped table-inverse table-responsive">
+  <thead class="thead-inverse">
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Space(sq metres)</th>
+      <th>Price</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    {% for house in warehouses %}
+    <tr>
+      <td><a href="/update_warehouse/{{house.id}}">{{ house.name }}</a></td>
+      <td>{{house.location}}</td>
+      <td>{{house.space}}</td>
+      <td>{{house.price}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% include 'properties/pagination.html' %} {% else %}
+<h3>There are no ware houses yet.</h3>
+<a href="{% url 'properties:create_warehouse' %}">Add A House</a>
+{% endif %} {% endblock content %}

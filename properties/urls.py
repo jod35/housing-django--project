@@ -28,10 +28,12 @@ urlpatterns = [
 
     path('register_agent', views.create_agent, name='create_agent'),
 
-    path('houses/',views.HouseListView.as_view(),name='houses'),
+    path('houses/', views.HouseListView.as_view(), name='houses'),
 
 
-    path('update_house/<pk>/',views.HouseUpdateView.as_view(),name='house_update'),
+    path('update_house/<pk>/', views.HouseUpdateView.as_view(), name='house_update'),
 
-    path('delete_house/<int:id>',views.delete_house,name='house_delete')
+    path('delete_house/<int:id>', views.delete_house, name='house_delete'),
+
+    path('warehouses', views.WareHouseListView.as_view(), name='warehouses'),
 ]
