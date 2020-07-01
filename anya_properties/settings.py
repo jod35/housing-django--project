@@ -114,6 +114,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILESDIRS = (os.path.join(BASE_DIR, 'static'))
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT=os.path.join(BASE_DIR,'static')
 
 
 LOGIN_REDIRECT_URL = 'properties:admin_dashboard'
