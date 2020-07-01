@@ -10,7 +10,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY ='veugugdcuigduigsui@!@!#@34h24iy2472424@$@$#@T#$T#'
+SECRET_KEY = 'g!(9+*jtlt5alu!s8l+_sdhhh4#7jl!8-(0iwj%8rnmh^@ubb0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'properties.apps.PropertiesConfig',
     'crispy_forms',
-    'whitenoise.runserver_nostatic'
+    'whitenoise.runserver_nostatic',
 ]
 
 MIDDLEWARE = [
@@ -112,13 +112,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILESDIRS = (os.path.join(BASE_DIR, 'static'),)
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILESDIRS = (os.path.join(BASE_DIR, 'static'))
 STATIC_ROOT=os.path.join(BASE_DIR,'static')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-
-MEDIA_ROOT=os.path.join(BASE_DIR,'media')
-MEDIA_URL='/media/'
 
 LOGIN_REDIRECT_URL = 'properties:admin_dashboard'
 LOGIN_URL = 'properties:admin_login'
@@ -128,3 +125,4 @@ LOGOUT_URL = 'properties:admin_logout'
 #crispy_forms setting
 
 CRISPY_TEMPLATE_PACK='bootstrap4'
+
