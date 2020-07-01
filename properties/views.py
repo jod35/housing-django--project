@@ -108,7 +108,7 @@ def delete_warehouse(request, id):
     if request.method == 'POST':
         warehouse.delete()
         messages.success(request, 'Record deleted successfully')
-        return redirect('properties:houses')
+        return redirect('properties:warehouses')
     context = {
         'house': warehouse
     }
