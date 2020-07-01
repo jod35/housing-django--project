@@ -10,7 +10,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY ='veugugdcuigduigsui@!@!#@34h24iy2472424@$@$#@T#$T#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -112,10 +112,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILESDIRS = (os.path.join(BASE_DIR, 'static'))
+STATICFILESDIRS = (os.path.join(BASE_DIR, 'static'),)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT=os.path.join(BASE_DIR,'static')
 
+
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+MEDIA_URL='/media/'
 
 LOGIN_REDIRECT_URL = 'properties:admin_dashboard'
 LOGIN_URL = 'properties:admin_login'
